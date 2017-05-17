@@ -33,9 +33,9 @@
 #include <std_msgs//Time.h>
 #include <geometry_msgs/WrenchStamped.h>
 #include <geometry_msgs/PoseStamped.h>
-#include <smart_servo_service.h>
-#include <path_parameters_service.h>
-#include <time_to_destination_service.h>
+#include <iiwa_ros/smart_servo_service.h>
+#include <iiwa_ros/path_parameters_service.h>
+#include <iiwa_ros/time_to_destination_service.h>
 #include <ros/ros.h>
 
 #include <string>

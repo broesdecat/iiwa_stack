@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <launch>
-    
     <!-- Loads thee iiwa.world environment in Gazebo. -->
     
     <!-- These are the arguments you can pass this launch file, for example paused:=true -->
@@ -30,9 +29,5 @@
     </include>
     
     <!-- Run a python script to send a service call to gazebo_ros to spawn a URDF robot -->
-    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-          args="-urdf -model iiwa -param robot_description"/>
-    
-    
-    </launch>
-    
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model iiwa -param robot_description"/>
+</launch>    

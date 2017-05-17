@@ -24,7 +24,7 @@
 #pragma once
 
 #include <iiwa_msgs/ConfigureSmartServo.h>
-#include <iiwa_services.hpp>
+#include <iiwa_ros/iiwa_services.hpp>
 
 namespace iiwa_ros {
 	
