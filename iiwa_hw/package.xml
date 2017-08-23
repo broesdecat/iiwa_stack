@@ -15,7 +15,7 @@
   <build_depend>hardware_interface</build_depend>
   <build_depend>control_toolbox</build_depend>
   <build_depend>realtime_tools</build_depend>
-  <build_depend> roscpp </build_depend>
+  <build_depend>roscpp</build_depend>
   <build_depend>iiwa_msgs</build_depend>
   <build_depend>iiwa_ros</build_depend>
 

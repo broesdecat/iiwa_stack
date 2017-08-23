@@ -21,9 +21,9 @@
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <smart_servo_service.h>
+#include <iiwa_ros/smart_servo_service.h>
 #include <iiwa_msgs/ControlMode.h>
-#include <conversions.h>
+#include <iiwa_ros/conversions.h>
 
 namespace iiwa_ros {	
   
@@ -123,11 +123,11 @@ namespace iiwa_ros {
   
   bool SmartServoService::setCartesianImpedanceMode(const iiwa_msgs::CartesianQuantity& cartesian_stiffness, const iiwa_msgs::CartesianQuantity& cartesian_damping, 
                                                     const double nullspace_stiffness, const double nullspace_damping) {
-    setCartesianImpedanceMode(cartesian_stiffness, cartesian_damping, nullspace_stiffness, nullspace_damping, CartesianQuantityFromDouble(-1), CartesianQuantityFromDouble(-1), CartesianQuantityFromDouble(-1), false);
+    setCartesianImpedanceMode(cartesian_stiffness, cartesian_damping, nullspace_stiffness, nullspace_damping, cartesianQuantityFromDouble(-1), cartesianQuantityFromDouble(-1), cartesianQuantityFromDouble(-1), false);
   }
   
   bool SmartServoService::setCartesianImpedanceMode(const iiwa_msgs::CartesianQuantity& cartesian_stiffness, const iiwa_msgs::CartesianQuantity& cartesian_damping) {
-    setCartesianImpedanceMode(cartesian_stiffness, cartesian_damping, -1, -1, CartesianQuantityFromDouble(-1), CartesianQuantityFromDouble(-1), CartesianQuantityFromDouble(-1), false);
+    setCartesianImpedanceMode(cartesian_stiffness, cartesian_damping, -1, -1, cartesianQuantityFromDouble(-1), cartesianQuantityFromDouble(-1), cartesianQuantityFromDouble(-1), false);
   }
   
   bool SmartServoService::setCartesianImpedanceMode(const iiwa_msgs::CartesianQuantity& cartesian_stiffness, const iiwa_msgs::CartesianQuantity& cartesian_damping, 
@@ -144,7 +144,7 @@ namespace iiwa_ros {
   }
   
   bool SmartServoService::setDesiredForceMode(const int cartesian_dof, const double desired_force, const double desired_stiffness) {
-    setDesiredForceMode(cartesian_dof, desired_force, desired_stiffness,CartesianQuantityFromDouble(-1), CartesianQuantityFromDouble(-1), CartesianQuantityFromDouble(-1), false);
+    setDesiredForceMode(cartesian_dof, desired_force, desired_stiffness,cartesianQuantityFromDouble(-1), cartesianQuantityFromDouble(-1), cartesianQuantityFromDouble(-1), false);
   }
   
   bool SmartServoService::setSinePatternmode(const int cartesian_dof, const double frequency, const double amplitude, const double stiffness, 
@@ -155,6 +155,6 @@ namespace iiwa_ros {
   }
   
   bool SmartServoService::setSinePatternmode(const int cartesian_dof, const double frequency, const double amplitude, const double stiffness) {
-    setSinePatternmode(cartesian_dof, frequency, amplitude, stiffness, CartesianQuantityFromDouble(-1), CartesianQuantityFromDouble(-1), CartesianQuantityFromDouble(-1), false);
+    setSinePatternmode(cartesian_dof, frequency, amplitude, stiffness, cartesianQuantityFromDouble(-1), cartesianQuantityFromDouble(-1), cartesianQuantityFromDouble(-1), false);
   }
 }
